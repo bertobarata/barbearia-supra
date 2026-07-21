@@ -1,0 +1,9 @@
+{
+  "name": "barbearia-supra-website",
+  "version": "0.1.0",
+  "description": "Landing page — Barbearia Supra, Benfica (Lisboa). Barata Studio.",
+  "private": true,
+  "scripts": {
+    "serve": "npx serve -l 5050 ."
+  }
+}

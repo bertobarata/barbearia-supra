@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+
+# Source stashes (not used by the site)
+assets/ig-raw/
+assets/ig-new/
+
+# Node
+node_modules/
