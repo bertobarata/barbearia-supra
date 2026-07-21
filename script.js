@@ -14,21 +14,15 @@ window.addEventListener('scroll', onScroll, { passive: true });
 
 // One hero emblem collapses into the header position on scroll.
 const heroLogo = document.getElementById('heroLogo');
-const heroLogoSpace = document.querySelector('.hero__emblem-space');
 const navLogoMark = document.querySelector('.nav__logo-mark');
 let logoFloatReady = false;
 
 const syncHeroLogo = () => {
-  if (!heroLogo || !heroLogoSpace || !navLogoMark) return;
+  if (!heroLogo || !navLogoMark) return;
 
   heroLogo.classList.remove('is-floating', 'is-collapsed');
-  const startRect = heroLogoSpace.getBoundingClientRect();
+  const start = heroLogo.getBoundingClientRect();
   const target = navLogoMark.getBoundingClientRect();
-  const start = {
-    left: startRect.left,
-    top: startRect.top + window.scrollY,
-    width: startRect.width
-  };
   const scale = target.width / start.width;
 
   heroLogo.style.setProperty('--logo-x', `${start.left}px`);
