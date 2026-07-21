@@ -114,10 +114,7 @@ h1, h2, h3, h4 { line-height: 1.05; letter-spacing: -0.01em; color: var(--ink); 
   display: flex; align-items: center; justify-content: space-between;
 }
 .nav__logo { text-decoration: none; display: flex; align-items: center; gap: .7rem; line-height: 1; }
-.nav__logo-mark {
-  width: 52px; height: 52px; flex: 0 0 52px;
-  pointer-events: none;
-}
+.nav__logo-img { height: 52px; width: auto; }  /* original black art on paper — no filter */
 .nav__logo-sub {
   font-family: var(--display); font-size: .95rem;
   letter-spacing: .18em; text-transform: uppercase; color: var(--muted);
@@ -156,32 +153,11 @@ h1, h2, h3, h4 { line-height: 1.05; letter-spacing: -0.01em; color: var(--ink); 
   box-shadow: inset 0 0 180px rgba(60,40,20,.35);
 }
 .hero__content { position: relative; max-width: 820px; margin: 0 auto; width: 100%; display: flex; flex-direction: column; align-items: center; }
-.hero__emblem-space {
-  width: clamp(180px, 26vw, 300px);
-  aspect-ratio: 1;
-  margin-bottom: .4rem;
-}
 .hero__emblem {
-  width: 100%; height: auto;
+  width: clamp(180px, 26vw, 300px); height: auto;
+  margin-bottom: .4rem;
   filter: drop-shadow(0 8px 22px rgba(60,40,20,.3));
   animation: emblemIn 1s var(--ease) both;
-  transform-origin: top left;
-  will-change: transform;
-}
-.hero__emblem.is-floating {
-  position: fixed;
-  top: var(--logo-y, 120px);
-  left: var(--logo-x, 50%);
-  width: var(--logo-w, 260px);
-  z-index: 55;
-  pointer-events: none;
-  transition: transform .42s var(--ease), filter .42s var(--ease), opacity .25s var(--ease);
-  animation: none;
-}
-.nav.is-menu + .hero .hero__emblem.is-floating { opacity: 0; }
-.hero__emblem.is-collapsed {
-  filter: drop-shadow(0 4px 12px rgba(60,40,20,.18));
-  transform: translate3d(var(--logo-dx, 0), var(--logo-dy, 0), 0) scale(var(--logo-scale, .18));
 }
 @keyframes emblemIn { from { opacity: 0; transform: translateY(16px) scale(.96); } to { opacity: 1; transform: none; } }
 .hero__eyebrow {
@@ -406,7 +382,6 @@ section { padding: clamp(4rem, 9vw, 7rem) 0; position: relative; }
 }
 @media (max-width: 640px) {
   .nav__logo-sub { display: none; }
-  .nav__logo-mark { width: 46px; height: 46px; flex-basis: 46px; }
   .nav__links {
     position: fixed; inset: 0; width: 100vw; height: 100dvh;
     background: var(--paper); background-image: var(--grain); background-size: 150px 150px, 200px 200px, 170px 170px;
