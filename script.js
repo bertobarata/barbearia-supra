@@ -12,6 +12,42 @@ const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 40);
 onScroll();
 window.addEventListener('scroll', onScroll, { passive: true });
 
+// One hero emblem collapses into the header position on scroll.
+const heroLogo = document.getElementById('heroLogo');
+const navLogoMark = document.querySelector('.nav__logo-mark');
+let logoFloatReady = false;
+
+const syncHeroLogo = () => {
+  if (!heroLogo || !navLogoMark) return;
+
+  heroLogo.classList.remove('is-floating', 'is-collapsed');
+  const start = heroLogo.getBoundingClientRect();
+  const target = navLogoMark.getBoundingClientRect();
+  const scale = target.width / start.width;
+
+  heroLogo.style.setProperty('--logo-x', `${start.left}px`);
+  heroLogo.style.setProperty('--logo-y', `${start.top}px`);
+  heroLogo.style.setProperty('--logo-w', `${start.width}px`);
+  heroLogo.style.setProperty('--logo-dx', `${target.left - start.left}px`);
+  heroLogo.style.setProperty('--logo-dy', `${target.top - start.top}px`);
+  heroLogo.style.setProperty('--logo-scale', scale.toFixed(4));
+
+  heroLogo.classList.add('is-floating');
+  logoFloatReady = true;
+  heroLogo.classList.toggle('is-collapsed', window.scrollY > 80);
+};
+
+const onLogoScroll = () => {
+  if (logoFloatReady && heroLogo) {
+    heroLogo.classList.toggle('is-collapsed', window.scrollY > 80);
+  }
+};
+
+window.addEventListener('load', syncHeroLogo);
+window.addEventListener('resize', syncHeroLogo);
+window.addEventListener('scroll', onLogoScroll, { passive: true });
+syncHeroLogo();
+
 const setMenu = (open) => {
   navLinks.classList.toggle('is-open', open);
   nav.classList.toggle('is-menu', open);
