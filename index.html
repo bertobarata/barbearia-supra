@@ -57,10 +57,27 @@
       </a>
       <nav class="nav__links" id="navLinks">
         <a href="#servicos">Serviços</a>
+        <a href="#visita">Visita</a>
         <a href="#equipa">Equipa</a>
         <a href="#avaliacoes">Avaliações</a>
-        <a href="#visita">Visita</a>
         <a href="https://wa.me/351932411888" class="btn btn--sm" target="_blank" rel="noopener">Marcar</a>
+
+        <div class="nav__extra">
+          <span class="nav__extra-line"></span>
+          <div class="nav__socials">
+            <a href="https://www.instagram.com/barbeariasupra/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://www.facebook.com/Barbeariasupra/" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H8v-2.9h2.4V9.8c0-2.4 1.4-3.7 3.6-3.7 1 0 2.1.2 2.1.2v2.3h-1.2c-1.2 0-1.5.7-1.5 1.5v1.7h2.6l-.4 2.9h-2.2v7A10 10 0 0 0 22 12z"/></svg>
+            </a>
+            <a href="https://wa.me/351932411888" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9 3 3.6 8.4 3.6 15c0 2.4.7 4.7 2 6.7L3 29l7.6-2.5c1.9 1 4 1.6 6.2 1.6h.2c6.9 0 12.4-5.5 12.4-12.4S22.9 3 16 3zm7.3 17.7c-.3.9-1.7 1.7-2.4 1.8-.7.1-1.5.2-4.7-1-3.9-1.5-6.4-5.4-6.6-5.7-.2-.3-1.6-2.1-1.6-4s1-2.9 1.4-3.3c.4-.4.8-.5 1.1-.5h.8c.3 0 .7-.1 1.1.8.4.9 1.2 3.1 1.3 3.3.1.2.2.5 0 .8-.2.3-.3.5-.6.8-.3.3-.6.6-.9.9-.3.3-.6.6-.3 1.2.3.6 1.3 2.2 2.9 3.6 2 1.8 3.6 2.3 4.2 2.6.6.3.9.2 1.2-.1.3-.3 1.4-1.6 1.7-2.1.3-.5.7-.4 1.1-.3.5.2 2.9 1.4 3.4 1.6.5.2.8.4 1 .6.2.4 0 1.3-.4 2.2z"/></svg>
+            </a>
+          </div>
+          <a href="tel:+351932411888" class="nav__phone">932 411 888</a>
+          <p class="nav__addr">Estr. de Benfica 399A · Lisboa</p>
+        </div>
       </nav>
       <button class="nav__burger" id="burger" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -106,10 +123,6 @@
           Somos mais do que uma barbearia — somos o spot onde te sentes em casa. Boa música
           a rolar, conversa solta e uma equipa que vive o que faz todos os dias.
         </p>
-        <p>
-          Do clássico ao fade mais limpo, tratamos do teu estilo ao detalhe. Entras para dar
-          um corte, sais com outra energia.
-        </p>
         <p class="about__signature">— Cada cliente, cada corte, leva um pedaço da nossa essência.</p>
         <ul class="about__badges">
           <li>Falamos inglês</li>
@@ -125,6 +138,39 @@
     </div>
   </section>
 
+  <!-- ===== Visita / Horário / Mapa ===== -->
+  <section class="visit" id="visita">
+    <div class="visit__grid">
+      <div class="visit__info">
+        <p class="section__eyebrow">Visita-nos</p>
+        <h2 class="section__title">Estrada de Benfica 399A</h2>
+        <p class="visit__addr">1500-077 Lisboa · São Domingos de Benfica</p>
+
+        <table class="hours">
+          <tr><th>Segunda</th><td>09:30 – 20:00</td></tr>
+          <tr><th>Terça</th><td>09:30 – 20:00</td></tr>
+          <tr><th>Quarta</th><td>09:30 – 20:00</td></tr>
+          <tr><th>Quinta</th><td>09:30 – 20:00</td></tr>
+          <tr><th>Sexta</th><td>09:30 – 20:00</td></tr>
+          <tr class="hours--closed"><th>Sábado</th><td>Encerrado</td></tr>
+          <tr><th>Domingo</th><td>10:00 – 15:00</td></tr>
+        </table>
+
+        <div class="visit__cta">
+          <a href="https://wa.me/351932411888" class="btn" target="_blank" rel="noopener">Marcar no WhatsApp</a>
+          <a href="https://maps.google.com/?q=Barbearia+Supra+Estrada+de+Benfica+399A+Lisboa" class="btn btn--ghost" target="_blank" rel="noopener">Ver no mapa</a>
+        </div>
+      </div>
+      <div class="visit__map">
+        <iframe
+          title="Mapa Barbearia Supra"
+          src="https://www.google.com/maps?q=Estrada%20de%20Benfica%20399A%2C%201500-077%20Lisboa&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== Serviços ===== -->
   <section class="services" id="servicos">
     <div class="section__head">
@@ -133,23 +179,23 @@
     </div>
     <div class="services__grid">
       <article class="service">
-        <span class="service__icon">✂</span>
+        <span class="service__num">01</span>
         <h3>Corte de cabelo</h3>
         <p>Máquina e tesoura, lavagem e acabamento. Do clássico ao moderno.</p>
       </article>
       <article class="service service--feat">
         <span class="service__tag">Mais pedido</span>
-        <span class="service__icon">★</span>
+        <span class="service__num">02</span>
         <h3>Corte + Barba</h3>
         <p>O pacote completo. Corte à medida e barba desenhada com navalha.</p>
       </article>
       <article class="service">
-        <span class="service__icon">🪒</span>
+        <span class="service__num">03</span>
         <h3>Barba</h3>
         <p>Aparo, contorno com navalha, toalha quente e óleo.</p>
       </article>
       <article class="service">
-        <span class="service__icon">👦</span>
+        <span class="service__num">04</span>
         <h3>Corte criança</h3>
         <p>Até aos 12 anos. Paciência e um resultado que os pais aprovam.</p>
       </article>
@@ -168,7 +214,7 @@
         <div class="member__photo" data-ph="Rudi"><img src="assets/img/equipa-rudi.jpg" alt="Rudi, barbeiro" loading="lazy" onerror="this.remove()" /></div>
         <h3>Rudi</h3>
         <p class="member__role">Barbeiro</p>
-        <p class="member__bio">"Categoria, profissionalismo e serenidade" — citado vezes sem conta pelos clientes.</p>
+        <p class="member__bio">Categoria, profissionalismo e serenidade.</p>
       </article>
       <article class="member">
         <div class="member__photo" data-ph="Foto"><img src="assets/img/equipa-2.jpg" alt="Igor, barbeiro" loading="lazy" onerror="this.remove()" /></div>
@@ -252,39 +298,6 @@
 
     <div class="reviews__cta">
       <a href="https://www.google.com/maps/place/Barbearia+Supra/@38.7454023,-9.1816108,17z/data=!4m6!3m5!1s0xd19334e3f475fd7:0xaf38db3705b29ebf!8m2!3d38.7454023!4d-9.1816108!16s%2Fg%2F11k6_1kc2y" class="btn btn--ghost" target="_blank" rel="noopener">Ver mais 130+ avaliações no Google</a>
-    </div>
-  </section>
-
-  <!-- ===== Visita / Horário / Mapa ===== -->
-  <section class="visit" id="visita">
-    <div class="visit__grid">
-      <div class="visit__info">
-        <p class="section__eyebrow">Visita-nos</p>
-        <h2 class="section__title">Estrada de Benfica 399A</h2>
-        <p class="visit__addr">1500-077 Lisboa · São Domingos de Benfica</p>
-
-        <table class="hours">
-          <tr><th>Segunda</th><td>09:30 – 20:00</td></tr>
-          <tr><th>Terça</th><td>09:30 – 20:00</td></tr>
-          <tr><th>Quarta</th><td>09:30 – 20:00</td></tr>
-          <tr><th>Quinta</th><td>09:30 – 20:00</td></tr>
-          <tr><th>Sexta</th><td>09:30 – 20:00</td></tr>
-          <tr class="hours--closed"><th>Sábado</th><td>Encerrado</td></tr>
-          <tr><th>Domingo</th><td>10:00 – 15:00</td></tr>
-        </table>
-
-        <div class="visit__cta">
-          <a href="https://wa.me/351932411888" class="btn" target="_blank" rel="noopener">Marcar no WhatsApp</a>
-          <a href="https://maps.google.com/?q=Barbearia+Supra+Estrada+de+Benfica+399A+Lisboa" class="btn btn--ghost" target="_blank" rel="noopener">Ver no mapa</a>
-        </div>
-      </div>
-      <div class="visit__map">
-        <iframe
-          title="Mapa Barbearia Supra"
-          src="https://www.google.com/maps?q=Estrada%20de%20Benfica%20399A%2C%201500-077%20Lisboa&output=embed"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
     </div>
   </section>
 
